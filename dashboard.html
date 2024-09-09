@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ministry of Defence</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <header>
+        <div class="topheader">
+            <p>Government of India</p>
+            <p>भारत सरकार</p>
+        </div>
+
+        <div class="midheader">
+            <div id="img1">
+                <h2>Ministry of Defence</h2> <h3>रक्षा मंत्रालय</h3>
+            </div>
+            <div id="img2">
+                <img src="harghar.jpg" alt="Har Ghar Tiranga">
+                <img src="img-2.jpg" alt="">
+                <img src="img-3.png" alt="">
+            </div>
+        </div>
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: left;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+        </style>
+    </head>
+    <body>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th>OBC</th>
+                    <th>SC</th>
+                    <th>ST</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Vacancies : 7***</td>
+                    <td>Filled Up : 4***</td>
+                    <td>Un-Filled : 3***</td>
+                </tr>
+                <tr>
+                    <td>Filled : 4***</td>
+                    <td>Vacancies : 7***</td>
+                    <td>Un-Filled : 3***</td>
+                </tr>
+                <tr>
+                    <td>Un-Filled : 3***</td>
+                    <td>Filled Up : 4***</td>
+                    <td>Vacancies : 7***</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="para">
+            <h1>About The Ministry</h1>
+            <p>The Ministry of Defence (MoD) is a key government department responsible for implementing defense policies and
+                ensuring the security and sovereignty of a nation. It oversees the armed forces, including the army, navy,
+                and air force, and is tasked with protecting the country from external threats, managing military operations,
+                and maintaining readiness for combat. The MoD also plays a vital role in shaping defense strategies,
+                procuring military equipment, and coordinating with international allies on defense matters.</p>
+
+            <p>In addition to its military responsibilities, the Ministry of Defence is often involved in disaster relief,
+                humanitarian missions, and peacekeeping efforts, both domestically and abroad. It works closely with other
+                government agencies, such as intelligence services and foreign ministries, to ensure a comprehensive approach
+                to national security. The MoD is typically headed by a senior minister or secretary of defense, who is
+                responsible for advising the government on defense matters and making critical decisions regarding the
+                deployment and use of military resources.</p>
+                <p>Thank You</p>
+                <p>Govt Of India</p>
+        </div>
+        <footer>
+            <div class="footer2">
+                <p>Built By Future Web Developers</p>
+            </div>
+            
+        </footer>
+    
+        <script src="sih.js"></script>
+        <script>
+            function getUserDetails() {
+                const userDetails = {
+                    ipAddress: 'Fetching IP...', 
+                    browser: navigator.userAgent,
+                    accessTime: new Date().toLocaleString()
+                };
+                return userDetails;
+            }
+    
+            
+            const userDetails = getUserDetails();
+            console.log('User Details:', userDetails);
+    
+            
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    userDetails.ipAddress = data.ip;
+                    console.log('Updated User Details with IP:', userDetails);
+                })
+                .catch(error => console.error('Error fetching IP address:', error));
+        </script>
+    </body>
+    
+    </html>
+    
